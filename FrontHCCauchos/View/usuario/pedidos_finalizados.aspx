@@ -47,10 +47,5 @@
             </h3>
         </FooterTemplate>
     </asp:Repeater>
-    <asp:ObjectDataSource ID="ODS_pedidos_fin" runat="server" SelectMethod="ObtenerPedidosFin" TypeName="LogicaNegocio.LUsuario">
-        <SelectParameters>
-            <asp:SessionParameter Name="usu" SessionField="clienid" Type="Int32" />
-        </SelectParameters>
-    </asp:ObjectDataSource>
-</asp:Content>
+    </asp:Content>
 

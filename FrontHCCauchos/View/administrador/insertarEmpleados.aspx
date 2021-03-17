@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/administrador/Admin.master" AutoEventWireup="true" CodeFile="~/Controller/administrador/insertarEmpleados.aspx.cs" Inherits="View_administrador_insertarEmpleados" %>
+﻿<%@ Page Title="" Language="C#" async="true" MasterPageFile="~/View/administrador/Admin.master" AutoEventWireup="true" CodeFile="~/Controller/administrador/insertarEmpleados.aspx.cs" Inherits="View_administrador_insertarEmpleados" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -44,6 +44,7 @@
                                 <asp:ListItem Value="2">empleado</asp:ListItem>
                                 <asp:ListItem Value="3">domiciliario</asp:ListItem>
                             </asp:DropDownList>
+                    <asp:Label ID="respuesta" runat="server" ForeColor="#FF3300" Visible="False"></asp:Label>
                             <br />                      
                             <asp:Button ID="BTN_registrar_empleado" runat="server" Text="Registrar" class="btn btn-primary center-block" ValidationGroup="Registro" OnClick="BTN_registrar_empleado_Click" />
                 </div>                        
