@@ -13,29 +13,48 @@ public partial class View_Login : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //CREAR LA VALIDACION DE CORREO //
-
+        
     }
 
     protected async void BTN_ingresar_Click(object sender, EventArgs e)
     {
         LoginRequest login = new LoginRequest();
-        usuario.Nombre = TB_nombres.Text;
-        usuario.Apellido = TB_apellidos.Text;
-        usuario.Correo = TB_correo.Text;
-        usuario.Clave = TB_contraseña.Text;
-        usuario.Fecha_nacimiento = DateTime.Parse(TB_fecha_nacimiento.Text);
-        usuario.Identificacion = TB_identificacion.Text;
-        usuario.Rol_id = Int32.Parse(DDL_tipo_empleado.SelectedValue);
-        string url = "http://localhost:55147/api/empleado/registroClient";
+        login.correo = TB_correo.Text;
+        login.clave = TB_contraseña.Text;
+        login.AplicacionId = 1;
+        string url = "http://localhost:55147/api/Login";
         var HttpClient = new HttpClient();
-        var body = JsonConvert.SerializeObject(usuario);
+        var body = JsonConvert.SerializeObject(login);
         HttpContent content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
-        var httpResponse = await HttpClient.PostAsync(url, content);
-        if (httpResponse.IsSuccessStatusCode)
+        HttpResponseMessage httpResponse = await HttpClient.PostAsync(url, content);
+        if (httpResponse.Content.ReadAsStringAsync()!=null)
         {
-            var mensaje = await httpResponse.Content.ReadAsStringAsync();
-            respuesta.Text = mensaje;
-            respuesta.Visible = true;
+            UEncapUsuario usuario = JsonConvert.DeserializeObject<UEncapUsuario>(httpResponse.Content.ReadAsStringAsync().Result);
+            switch (usuario.Rol_id)
+            {
+                case 1:
+                    Response.Redirect("administrador/index_admin.aspx");
+                    break;
+                case 2:
+                    Response.Redirect("empleado/index_empleado.aspx");
+                    break;
+                case 3:
+                    Response.Redirect("domiciliario/index_domiciliario.aspx");
+                    break;
+                case 4:
+                    Response.Redirect("usuario/index_usuario.aspx");
+                    break;
+            }
+            if (usuario.Rol_id == 2)
+            {
+                MostrarMensaje1($"Su cuenta se encuentra en estado de recuperacion");
+                return;
+            }
+            else if (usuario.Rol_id == 3)
+            {
+                MostrarMensaje($"Su cuenta ha sido inhabilitada, comuniquese con el con el administrador");
+                return;
+            }
         }
     }
 
@@ -60,6 +79,16 @@ public partial class View_Login : System.Web.UI.Page
     }
 
 
+    private void MostrarMensaje(string mensaje)
+    {
+        LblMensaje.Text = mensaje;
+        PanelMensaje.Visible = true;
+    }
 
+    private void MostrarMensaje1(string mensaje)
+    {
+        LblMensaje1.Text = mensaje;
+        PanelMensaje1.Visible = true;
+    }
 
 }

@@ -10,7 +10,7 @@ namespace Utilitarios
 
         [Required(ErrorMessage = "la contraseña es requerida.")]
         public string clave { get; set; }
-        
+
         [Required]
         public int AplicacionId { get; set; }
     }
@@ -38,10 +38,10 @@ namespace Utilitarios
     }
     public class catalogopreciocategoria
     {
-            [Required(ErrorMessage = "necesita ingresar una categoria.")]
-            public int categoria { get; set; }
-            [Required(ErrorMessage = "necesita ingresar un precio.")]
-            public string precio { get; set; }
+        [Required(ErrorMessage = "necesita ingresar una categoria.")]
+        public int categoria { get; set; }
+        [Required(ErrorMessage = "necesita ingresar un precio.")]
+        public string precio { get; set; }
     }
     public class catalogopreciomarca
     {
