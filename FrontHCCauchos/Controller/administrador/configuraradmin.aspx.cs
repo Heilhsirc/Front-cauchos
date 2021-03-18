@@ -21,14 +21,14 @@ public partial class View_administrador_configuraradmin : System.Web.UI.Page
     {
         ClientScriptManager cm = this.ClientScript;
         UEncapUsuario usuario = new UEncapUsuario();
-        usuario.Nombre = LB_nombre.Text;
-        usuario.Apellido = LB_apellido.Text;
+        //usuario.Nombre = LB_nombre.Text;
+        //usuario.Apellido = LB_apellido.Text;
         usuario.Correo = LB_correo.Text;
         string url = "http://localhost:55147/api/admin/modificarCorreo";
         var HttpClient = new HttpClient();
         var body = JsonConvert.SerializeObject(usuario);
         HttpContent content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
-        var httpResponse = await HttpClient.PostAsync(url, content);
+        var httpResponse = await HttpClient.PutAsync(url, content);
         if (httpResponse.IsSuccessStatusCode)
         {
             var mensaje = await httpResponse.Content.ReadAsStringAsync();
