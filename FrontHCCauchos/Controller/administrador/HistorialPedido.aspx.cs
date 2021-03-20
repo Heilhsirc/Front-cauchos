@@ -1,16 +1,24 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
+using Utilitarios;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 public partial class View_administrador_HistorialPedido : System.Web.UI.Page
 {
-    protected void Page_Load(object sender, EventArgs e)
+    protected async void Page_Load(object sender, EventArgs e)
     {
-       
+        UEncapUsuario user = JsonConvert.DeserializeObject<UEncapUsuario>(Request.Cookies["cookie"].Value);
+        string url = "http://localhost:55147/api/Admin/ConsultarPedidos";
+        var HttpClient = new HttpClient();
+        HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", user.Token);
+        var json = await HttpClient.GetStringAsync(url);
+        List<UEncapPedido> lista = JsonConvert.DeserializeObject<List<UEncapPedido>>(json);
+        GV_Pedidos.DataSource = lista;
+        GV_Pedidos.DataBind();
     }
 
     protected void GV_Pedidos_SelectedIndexChanged(object sender, EventArgs e)

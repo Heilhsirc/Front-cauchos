@@ -1,18 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/administrador/Admin.master" AutoEventWireup="true" CodeFile="~/Controller/administrador/HistorialPedido.aspx.cs" Inherits="View_administrador_HistorialPedido" %>
+﻿<%@ Page Title="" async="true" Language="C#" MasterPageFile="~/View/administrador/Admin.master" AutoEventWireup="true" CodeFile="~/Controller/administrador/HistorialPedido.aspx.cs" Inherits="View_administrador_HistorialPedido" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-        <style type="text/css">
-        .auto-style2 {
-            width: 389px;
-        }
-        .auto-style3 {
-            width: 180px;
-        }
-        .auto-style4 {
-            width: 110%
-        }
-    </style>
-</asp:Content>
+        </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
          <br />
     <h1 class="text-center"><strong>Historial De Pedidos</strong></h1>
@@ -21,10 +10,9 @@
     <div class="">
         <div class="form-inline text-center">
             <div class="form-group">
-                <asp:DropDownList  ID="DDL_Estado" runat="server"  AutoPostBack="True" CssClass="form-control" DataSourceID="ODS_Estados" DataTextField="Estado" DataValueField="Id" OnSelectedIndexChanged="DDL_Estado_SelectedIndexChanged">
+                <asp:DropDownList  ID="DDL_Estado" runat="server"  AutoPostBack="True" CssClass="form-control"  DataTextField="Estado" DataValueField="Id" OnSelectedIndexChanged="DDL_Estado_SelectedIndexChanged">
                  <asp:ListItem>Seleccionar Estado</asp:ListItem>
                  </asp:DropDownList>
-                 <asp:ObjectDataSource ID="ODS_Estados" runat="server" SelectMethod="ConsultarEstadoPedidos" TypeName="LogicaNegocio.LAdministrador"></asp:ObjectDataSource>
                  <asp:Button ID="Btn_todos" runat="server" CssClass="btn btn-default" Text="Todos" OnClick="Btn_todos_Click" />
             </div>  
         </div>
@@ -34,7 +22,7 @@
         <div class=" col-lg-12 col-md-offset-0.5">
              <div style="overflow-x: auto;"> 
                  <br />
-                  <asp:GridView ID="GV_Pedidos" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="ODS_Pedidos" ForeColor="#333333" GridLines="None" OnRowDataBound="GV_Pedidos_RowDataBound" AllowPaging="True" OnSelectedIndexChanged="GV_Pedidos_SelectedIndexChanged" PageSize="4" Width="988px">
+                  <asp:GridView ID="GV_Pedidos" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDataBound="GV_Pedidos_RowDataBound" AllowPaging="True" OnSelectedIndexChanged="GV_Pedidos_SelectedIndexChanged" PageSize="4" Width="988px">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <Columns>
                     <asp:TemplateField HeaderText="Id" SortExpression="Id" >
@@ -71,7 +59,7 @@
                         <ItemTemplate>
                             <asp:Label ID="Label1" runat="server" Text='<%# Bind("Id") %>' Visible="False"></asp:Label>
                             <br />
-                            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" class="table-hover" DataSourceID="ODS_Elementos" Height="100%">
+                            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" class="table-hover"  Height="100%">
                                 <Columns>
                                     <asp:BoundField DataField="Pedido_id" HeaderText="Pedido_id" SortExpression="Pedido_id" />
                                     <asp:BoundField DataField="Producto_id" HeaderText="Producto_id" SortExpression="Producto_id" />
@@ -104,12 +92,5 @@
     </div>
            
 
-     <asp:ObjectDataSource ID="ODS_Pedidos" runat="server" SelectMethod="ConsultarPedidos" TypeName="LogicaNegocio.LAdministrador"></asp:ObjectDataSource>
-
-     <asp:ObjectDataSource ID="ODS_PedidosEstado" runat="server" SelectMethod="ConsultarPedidosEstado" TypeName="LogicaNegocio.LAdministrador">
-        <SelectParameters>
-            <asp:ControlParameter ControlID="DDL_Estado" Name="est" PropertyName="SelectedValue" Type="Int32" />
-        </SelectParameters>
-     </asp:ObjectDataSource>
-</asp:Content>
+     </asp:Content>
 

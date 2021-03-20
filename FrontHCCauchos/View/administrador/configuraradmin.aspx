@@ -22,7 +22,7 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TB_editCorreo" ErrorMessage="*" ValidationGroup="grupocorreo"></asp:RequiredFieldValidator>
                     <asp:Button ID="BTN_editarCorreo" runat="server" Text="Cambiar" class="btn btn-primary"  ValidationGroup="grupocorreo" OnClick="BTN_editarCorreo_Click"/>
                     <asp:Button ID="BTN_cancelar" runat="server" Text="Cancelar" class="btn btn-primary" OnClick="BTN_cancelar_Click"   />
-                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Inventario/engranaje.png" OnClick="ImageButton1_Click"  />
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/ima/engranaje.png" OnClick="ImageButton1_Click"  />
                     <br />
                     Contraseña:
                     <asp:Label ID="LB_contraseña" runat="server" Text="Label" class="form-control"></asp:Label>
@@ -30,7 +30,7 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="TB_editarPass" ValidationGroup="grupopass"></asp:RequiredFieldValidator>
                     <asp:Button ID="BTN_editarPass" runat="server" Text="Cambiar" class="btn btn-primary"  ValidationGroup="grupopass" OnClick="BTN_editarPass_Click"/>
                     <asp:Button ID="BTN_cancelar2" runat="server" Text="Cancelar" Class="btn btn-primary" OnClick="BTN_cancelar2_Click"  />
-                    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Inventario/engranaje.png" OnClick="ImageButton2_Click"  />
+                    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/ima/engranaje.png" OnClick="ImageButton2_Click"  />
                     <br />
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Se requiere entre 8 - 16 caracteres tanto letras,numeros,mayusculas y minusculas" ControlToValidate="TB_editarPass" ValidationExpression="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" ValidationGroup="grupopass"></asp:RegularExpressionValidator>
                 </div>    

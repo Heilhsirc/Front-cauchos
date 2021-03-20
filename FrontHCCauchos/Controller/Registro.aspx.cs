@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Net.Http;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using Newtonsoft.Json;
+using Utilitarios;
 
 
 
@@ -11,7 +10,27 @@ public partial class View_Registro : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e) { }
 
-    protected void BTN_registrar_Click(object sender, EventArgs e) { }
+    protected async void BTN_registrar_Click(object sender, EventArgs e) {
+        ClientScriptManager cm = this.ClientScript;
+        UEncapUsuario usuario = new UEncapUsuario();
+        usuario.Correo = TB_correo.Text;
+        usuario.Nombre = TB_nombres.Text;
+        usuario.Apellido = TB_apellidos.Text;
+        usuario.Clave = TB_contraseña.Text;
+        usuario.Fecha_nacimiento = DateTime.Parse(TB_fecha_nacimiento.Text);
+        usuario.Identificacion = TB_identificacion.Text;
+        string url = "http://localhost:55147/api/registro/";
+        var HttpClient = new HttpClient();
+        var body = JsonConvert.SerializeObject(usuario);
+        HttpContent content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
+        var httpResponse = await HttpClient.PostAsync(url, content);
+        string res = httpResponse.Content.ReadAsStringAsync().Result;
+        if (res != null)
+        {
+            LblMensaje.Text = res;
+
+        }
+    }
 
     private void MostrarMensaje(string mensaje)
     {

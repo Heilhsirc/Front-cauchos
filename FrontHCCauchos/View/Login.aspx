@@ -283,7 +283,7 @@
                                      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ValidationGroup="Login" ControlToValidate="TB_contraseña" ErrorMessage="*"></asp:RequiredFieldValidator>
                                 </div>  
                                  <div>                     
-                                      <asp:Button ID="BTN_ingresar" runat="server" ValidationGroup="Login" Text="Ingresar" class="fadeIn fourth" OnClick="BTN_ingresar_Click" />
+                                      <asp:Button ID="BTN_ingresar" runat="server" ValidationGroup="Login" Text="Ingresar" class="fadeIn fourth" OnClick="BTN_ingresar_Click"/>
                                      <br />
                                      
                                         <asp:Panel runat="server" ID="PanelMensaje" Visible="false" CssClass="alert alert-danger shadow" role="alert">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/administrador/Admin.master" AutoEventWireup="true" CodeFile="~/Controller/administrador/AgregarInventario.aspx.cs" Inherits="View_administrador_AgregarInventario" %>
+﻿<%@ Page Title="" async="true" Language="C#" MasterPageFile="~/View/administrador/Admin.master" AutoEventWireup="true" CodeFile="~/Controller/administrador/AgregarInventario.aspx.cs" Inherits="View_administrador_AgregarInventario" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -44,9 +44,7 @@
                        
                         
 
-                  <asp:ObjectDataSource ID="ODS_Marca" runat="server" SelectMethod="ConsultarMarca" TypeName="LogicaNegocio.LAdministrador"></asp:ObjectDataSource>
                        <br />
-                       <asp:ObjectDataSource ID="ODS_Categoria" runat="server" SelectMethod="ConsultarCategoria" TypeName="LogicaNegocio.LAdministrador"></asp:ObjectDataSource>
                        <asp:Button ID ="BTN_subir" runat="server" Text="Almacenar" class=" btn btn-primary center-block"  ValidationGroup="vali" OnClick="BTN_subir_Click" />
                        <asp:Panel runat="server" ID="PanelMensaje" Visible="false" CssClass="alert alert-danger shadow" role="alert">
 	                        <strong>

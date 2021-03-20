@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/Principal.master" AutoEventWireup="true" CodeFile="~/Controller/Recuperacion_clave.aspx.cs" Inherits="View_Recuperacion_clave" %>
+﻿<%@ Page Title="" async="true" Language="C#" MasterPageFile="~/View/Principal.master" AutoEventWireup="true" CodeFile="~/Controller/Recuperacion_clave.aspx.cs" Inherits="View_Recuperacion_clave" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
