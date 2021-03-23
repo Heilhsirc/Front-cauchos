@@ -15,7 +15,7 @@ public partial class View_administrador_HistorialVentas : System.Web.UI.Page
     protected async void Page_Load(object sender, EventArgs e)
     {
         UEncapUsuario user = JsonConvert.DeserializeObject<UEncapUsuario>(Request.Cookies["cookie"].Value);
-        string url = "http://localhost:55147/api/Admin/ConsultVentas";
+        string url = "http://18.224.240.8/api/Admin/ConsultVentas";
         var HttpClient = new HttpClient();
         HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", user.Token);
         var json = await HttpClient.GetStringAsync(url);

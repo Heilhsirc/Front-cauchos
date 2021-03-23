@@ -24,7 +24,7 @@ public partial class View_administrador_configuraradmin : System.Web.UI.Page
         ClientScriptManager cm = this.ClientScript;
         UEncapUsuario usuario = new UEncapUsuario();
         usuario.Correo = TB_editCorreo.Text;
-        string url = "http://localhost:55147/api/admin/modificarCorreo";
+        string url = "http://18.224.240.8/api/admin/modificarCorreo";
         var HttpClient = new HttpClient();
         UEncapUsuario user = JsonConvert.DeserializeObject<UEncapUsuario>(Request.Cookies["cookie"].Value);
         HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", user.Token);

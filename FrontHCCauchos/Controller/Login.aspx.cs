@@ -21,7 +21,7 @@ public partial class View_Login : System.Web.UI.Page
         usuario.correo = TB_correo.Text;
         usuario.clave = TB_contraseña.Text;
         usuario.AplicacionId = 1;
-        string url = "http://localhost:55147/api/login/login";
+        string url = "http://18.224.240.8/api/login/login";
         var HttpClient = new HttpClient();
         var body = JsonConvert.SerializeObject(usuario);
         HttpContent content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");
@@ -62,16 +62,16 @@ public partial class View_Login : System.Web.UI.Page
         switch (user.Rol_id)
         {
             case 1:
-                Response.Redirect("administrador/configuraradmin.aspx");
+                Response.Redirect("~/View/administrador/configuraradmin.aspx");
                 break;
             case 2:
-                Response.Redirect("empleado/index_empleado.aspx");
+                Response.Redirect("~/View/empleado/index_empleado.aspx");
                 break;
             case 3:
-                Response.Redirect("domiciliario/index_domiciliario.aspx");
+                Response.Redirect("~/View/domiciliario/index_domiciliario.aspx");
                 break;
             case 4:
-                Response.Redirect("usuario/index_usuario.aspx");
+                Response.Redirect("~/View/usuario/index_usuario.aspx");
                 break;
         }
         if (user.Rol_id == 2)

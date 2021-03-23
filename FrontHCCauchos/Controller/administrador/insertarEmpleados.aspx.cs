@@ -26,7 +26,7 @@ public partial class View_administrador_insertarEmpleados : System.Web.UI.Page
         usuario.Fecha_nacimiento = DateTime.Parse(TB_fecha_nacimiento.Text);
         usuario.Identificacion = TB_identificacion.Text;
         usuario.Rol_id = Int32.Parse(DDL_tipo_empleado.SelectedValue);
-        string url = "http://localhost:55147/api/empleado/registroClient";
+        string url = "http://18.224.240.8/api/empleado/registroClient";
         var HttpClient = new HttpClient();
         var body = JsonConvert.SerializeObject(usuario);
         HttpContent content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");

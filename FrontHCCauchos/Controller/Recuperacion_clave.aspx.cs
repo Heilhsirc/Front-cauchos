@@ -16,7 +16,7 @@ public partial class View_Recuperacion_clave : System.Web.UI.Page
     protected async void BTN_Recuperar_Click(object sender, EventArgs e) {
         UEncapUsuario user = new UEncapUsuario();
         user.Correo= TB_CorreoRecuperar.Text;
-        string url = "http://localhost:55147/api/Recuperar_Contraseña/Recuperar_Clave";
+        string url = "http://18.224.240.8/api/Recuperar_Contraseña/Recuperar_Clave";
         var HttpClient = new HttpClient();
         var body = JsonConvert.SerializeObject(user);
         HttpContent content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");

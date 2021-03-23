@@ -25,7 +25,7 @@ public partial class View_administrador_AgregarInventario : System.Web.UI.Page
         item.Titulo = TB_Titulo.Text;
         item.Ca_minima = Int32.Parse(TB_Minima.Text);
         UEncapUsuario user = JsonConvert.DeserializeObject<UEncapUsuario>(Request.Cookies["cookie"].Value);
-        string url = "http://localhost:55147/api/Admin/InsertarItem";
+        string url = "http://18.224.240.8/api/Admin/InsertarItem";
         var HttpClient = new HttpClient();
         HttpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", user.Token);
         var body = JsonConvert.SerializeObject(item);
@@ -37,10 +37,12 @@ public partial class View_administrador_AgregarInventario : System.Web.UI.Page
 
     protected void B_cerrar_mensaje1_Click(object sender, EventArgs e)
     {
+
     }
 
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
+
     }
 
     protected void LinkButton2_Click(object sender, EventArgs e)
