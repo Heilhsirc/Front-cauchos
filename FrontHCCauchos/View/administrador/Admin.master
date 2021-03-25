@@ -99,8 +99,8 @@
                 <i class="fa fa-edit"></i> <span>Configuracion</span><i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="configuraradmin.aspx"><i class="fa fa-circle-o"></i> Cuenta</a></li>
-                <li><a href="Mision_Vision_Objetivo.aspx"><i class="fa fa-circle-o"></i> Mision-Vision-Objetivo</a></li>
+                <li><a href="../View/administrador/configuraradmin.aspx"><i class="fa fa-circle-o"></i> Cuenta</a></li>
+                <li><a href="../View/administrador/Mision_Vision_Objetivo.aspx"><i class="fa fa-circle-o"></i> Mision-Vision-Objetivo</a></li>
               </ul>
             </li>
              <li class="treeview">
@@ -108,7 +108,7 @@
                 <i class="fa fa-money shopping-cart "></i> <span>Ventas</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="HistorialVentas.aspx"><i class="fa fa-circle-o"></i> Historial de Ventas</a></li>
+                <li><a href="../View/administrador/HistorialVentas.aspx"><i class="fa fa-circle-o"></i> Historial de Ventas</a></li>
                
               </ul>
             </li> 
@@ -117,7 +117,7 @@
                 <i class="fa fa-shopping-cart "></i> <span>Pedidos</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="HistorialPedido.aspx"><i class="fa fa-circle-o"></i> Historial de Pedidos</a></li>
+                <li><a href="../View/administrador/HistorialPedido.aspx"><i class="fa fa-circle-o"></i> Historial de Pedidos</a></li>
                
               </ul>
             </li> 
@@ -126,8 +126,8 @@
                 <i class="fa fa-dashboard"></i> <span>Empleados</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="insertarEmpleados.aspx"><i class="fa fa-circle-o"></i> Agregar Empleados</a></li>
-                <li><a href="cambiosEmpleado.aspx"><i class="fa fa-circle-o"></i> Ver-Editar-Inhabilitar Empleados</a></li>
+                <li><a href="../View/administrador/insertarEmpleados.aspx"><i class="fa fa-circle-o"></i> Agregar Empleados</a></li>
+                <li><a href="../View/administrador/cambiosEmpleado.aspx"><i class="fa fa-circle-o"></i> Ver-Editar-Inhabilitar Empleados</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -150,14 +150,14 @@
                   <i class="fa fa-dashboard"></i> <span>Inventario</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="AgregarInventario.aspx"><i class="fa fa-circle-o"></i> Agregar Item</a></li>
-                <li><a href="ConsultarInventario.aspx"><i class="fa fa-circle-o"></i> Consulatar Inventario</a></li>
+                <li><a href="../View/administrador/AgregarInventario.aspx"><i class="fa fa-circle-o"></i> Agregar Item</a></li>
+                <li><a href="../View/administrador/ConsultarInventario.aspx"><i class="fa fa-circle-o"></i> Consulatar Inventario</a></li>
               </ul>
             </li>         
          
             <li>
 
-              <a href="Alertas.aspx">
+              <a href="../View/administrador/Alertas.aspx">
                 <i  class="fa fa-envelope-o"> </i><span>Notificaciones </span> 
                   
                 <small class="label pull-right bg-red">
@@ -171,7 +171,7 @@
                   <i class="fa fa-dashboard"></i> <span>Parametrizaciones</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="TiempoProductosCarrito.aspx"><i class="fa fa-circle-o"></i> Tiempo productos en carrito</a></li>
+                <li><a href="../View/administrador/TiempoProductosCarrito.aspx"><i class="fa fa-circle-o"></i> Tiempo productos en carrito</a></li>
               </ul>
             </li> 
           </ul>

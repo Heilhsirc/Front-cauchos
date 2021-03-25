@@ -29,6 +29,7 @@ public partial class View_Login : System.Web.UI.Page
         UEncapUsuario user = JsonConvert.DeserializeObject<UEncapUsuario>(httpResponse.Content.ReadAsStringAsync().Result);
         if (user != null)
         {
+            Session["user"] = user;
             HttpCookie cookie = new HttpCookie("cookie");
             cookie.Value = httpResponse.Content.ReadAsStringAsync().Result;
             cookie.Expires = DateTime.Now.AddMinutes(30);

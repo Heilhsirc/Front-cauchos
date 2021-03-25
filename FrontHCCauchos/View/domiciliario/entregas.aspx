@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/domiciliario/domiciliario_master.master" AutoEventWireup="true" CodeFile="~/Controller/domiciliario/entregas.aspx.cs" Inherits="View_domiciliario_entregas" %>
+﻿<%@ Page Title="" async="true" Language="C#" MasterPageFile="~/View/domiciliario/domiciliario_master.master" AutoEventWireup="true" CodeFile="~/Controller/domiciliario/entregas.aspx.cs" Inherits="View_domiciliario_entregas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1 class="text-center text-primary"><strong>PEDIDOS PARA ENTREGAR</strong></h1>
     <br />
-    <asp:Repeater ID="R_pedido" runat="server" DataSourceID="ODS_entregas" OnItemCommand="R_pedido_ItemCommand">
+    <asp:Repeater ID="R_pedido" runat="server"  OnItemCommand="R_pedido_ItemCommand">
         <ItemTemplate>
             <div id="carta" class="card text-center bg-primary fa-border border-dark mb-5 col-sm-6">
                 <div class="card-header">
@@ -37,11 +37,6 @@
             </h3>
         </FooterTemplate>
     </asp:Repeater>
-    <asp:ObjectDataSource ID="ODS_entregas" runat="server" SelectMethod="pedidosdomiciliario" TypeName="LogicaNegocio.LDomiciliario">
-        <SelectParameters>
-            <asp:SessionParameter Name="user" SessionField="domiid" Type="Int32" />
-        </SelectParameters>
-    </asp:ObjectDataSource>
     <br />
 </asp:Content>
 

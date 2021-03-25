@@ -35,7 +35,7 @@
         <!-- NavigationADASD-->
           <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
-              <h2 id="titulo" class="navbar-header text-white" href="home.aspx">
+              <h2 id="titulo" class="navbar-header text-white" href="~/View/home.aspx">
                   <img src="../ima/cauchosicono.png" alt="Alternate Text" width="8%" height="6%" /> HC CAUCHOS</h2>    
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,19 +43,19 @@
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="home.aspx">Home</a>
+                    <a class="nav-link" href="../View/home.aspx">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="">Catalogo</a>
+                    <a class="nav-link" href="../View/catalogo.aspx">Catalogo</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contacto.aspx">Contacto</a>
+                    <a class="nav-link" href="../View/contacto.aspx">Contacto</a>
                   </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="login.aspx">Ingresar</a>
+                    <a class="nav-link" href="../View/login.aspx">Ingresar</a>
                   </li>
                      <li class="nav-item">
-                    <a class="nav-link" href="Registro.aspx">Registrate</a>
+                    <a class="nav-link" href="../View/Registro.aspx">Registrate</a>
                   </li>         
                 </ul>
               </div>

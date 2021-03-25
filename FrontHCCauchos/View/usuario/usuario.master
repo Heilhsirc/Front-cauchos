@@ -104,18 +104,18 @@
                     <span class=""></span>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="configurarUsu.aspx"><i class="fa fa-circle-o"></i>Configurar Cuenta</a></li>
-                    <li><a href="eliminarcuenta.aspx"><i class="fa fa-circle-o"></i>Eliminar cuenta</a></li>
+                    <li><a href="../View/usuario/configurarUsu.aspx"><i class="fa fa-circle-o"></i>Configurar Cuenta</a></li>
+                    <li><a href="../View/usuario/eliminarcuenta.aspx"><i class="fa fa-circle-o"></i>Eliminar cuenta</a></li>
                   </ul>
                 </li>
 
             <li >
-              <a href="catalogoUsuario.aspx">
+              <a href="../View/usuario/catalogoUsuario.aspx">
                 <i class="fa fa-th"></i> <span>Catalogo</span>
               </a>
             </li>
               <li >
-              <a href="Carrito.aspx">
+              <a href="../View/usuario/Carrito.aspx">
                 <i class="fa fa-shopping-cart "></i> <span>Carrito</span>
               </a>
             </li>            
@@ -124,8 +124,8 @@
                 <i class="fa fa-files-o"></i> <span>Pedidos</span><i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="pedidos_estados.aspx"><i class="fa fa-circle-o"></i> Pedidos activos</a></li>
-                <li><a href="pedidos_finalizados.aspx"><i class="fa fa-circle-o"></i> Pedidos finalizados</a></li>
+                <li><a href="../View/usuario/pedidos_estados.aspx"><i class="fa fa-circle-o"></i> Pedidos activos</a></li>
+                <li><a href="../View/usuario/pedidos_finalizados.aspx"><i class="fa fa-circle-o"></i> Pedidos finalizados</a></li>
               </ul>
             </li>
 

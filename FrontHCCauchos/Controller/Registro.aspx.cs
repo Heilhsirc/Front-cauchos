@@ -19,7 +19,7 @@ public partial class View_Registro : System.Web.UI.Page
         usuario.Clave = TB_contraseña.Text;
         usuario.Fecha_nacimiento = DateTime.Parse(TB_fecha_nacimiento.Text);
         usuario.Identificacion = TB_identificacion.Text;
-        string url = "http://18.224.240.8/api/registro/";
+        string url = "http://18.224.240.8/api/Registro/Registro";
         var HttpClient = new HttpClient();
         var body = JsonConvert.SerializeObject(usuario);
         HttpContent content = new StringContent(body, System.Text.Encoding.UTF8, "application/json");

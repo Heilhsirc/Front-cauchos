@@ -94,12 +94,12 @@
           <ul class="sidebar-menu">
             <li class="header"><h4 class="text-primary">Barra De Navegacion</h4></li>
              <li>
-              <a href="configurarDomici.aspx">
+              <a href="../View/domiciliario/configurarDomici.aspx">
                 <i class="fa fa-edit"></i> <span>Configuracion</span>
               </a>
             </li>
             <li>
-              <a href="entregas.aspx">
+              <a href="../View/domiciliario/entregas.aspx">
                 <i class="fa fa-th"></i> <span>Pedidos para entregar</span> <small class="label pull-right bg-green"></small>
               </a>
             </li>                      

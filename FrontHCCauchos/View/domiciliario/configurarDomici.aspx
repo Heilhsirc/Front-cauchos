@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/View/domiciliario/domiciliario_master.master" AutoEventWireup="true" CodeFile="~/Controller/domiciliario/configurarDomici.aspx.cs" Inherits="View_domiciliario_configurarDomici" %>
+﻿<%@ Page Title="" async="true" Language="C#" MasterPageFile="~/View/domiciliario/domiciliario_master.master" AutoEventWireup="true" CodeFile="~/Controller/domiciliario/configurarDomici.aspx.cs" Inherits="View_domiciliario_configurarDomici" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

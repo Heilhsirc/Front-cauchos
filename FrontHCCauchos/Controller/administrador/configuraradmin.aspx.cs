@@ -11,11 +11,14 @@ public partial class View_administrador_configuraradmin : System.Web.UI.Page
     UEncapUsuario user = new UEncapUsuario();
     protected void Page_Load(object sender, EventArgs e)
     {
-        user = JsonConvert.DeserializeObject<UEncapUsuario>(Request.Cookies["cookie"].Value);
-        LB_nombre.Text = user.Nombre;
-        LB_apellido.Text = user.Apellido;
-        LB_correo.Text = user.Correo;
-        LB_contraseña.Text = user.Clave;
+        if (Request.Cookies["cookie"] != null || Session["user"]!=null)
+        {
+            user = JsonConvert.DeserializeObject<UEncapUsuario>(Request.Cookies["cookie"].Value);
+            LB_nombre.Text = user.Nombre;
+            LB_apellido.Text = user.Apellido;
+            LB_correo.Text = user.Correo;
+            LB_contraseña.Text = user.Clave;
+        }
     }
 
     protected async void BTN_editarCorreo_Click(object sender, EventArgs e)

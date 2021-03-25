@@ -93,24 +93,24 @@
           <ul class="sidebar-menu">
             <li class="header"><h4 class="text-primary">Barra De Navegacion</h4></li>
             <li>
-              <a href="configurarEmple.aspx">
+              <a href="../View/empleado/configurarEmple.aspx">
                 <i class="fa fa-edit"></i> <span>Configuracion</span>
               </a>
             </li>
               <li>
-              <a href="facturar.aspx">
+              <a href="../View/empleado/facturar.aspx">
                 <i class="fa fa-edit"></i> <span>Facturar</span>
               </a>
             </li>
                 <li>
-              <a href="venta.aspx">
+              <a href="../View/empleado/venta.aspx">
                 <i class="fa fa-money"></i> <span>Venta</span>
               </a>
             </li>
 
 
             <li>
-              <a href="pedidosatender.aspx">
+              <a href="../View/empleado/pedidosatender.aspx">
                 <i class="fa fa-th"></i> <span>Alistamiento</span> <small class="label pull-right bg-green"> <asp:Label ID="LB_pedidos" runat="server" Text=""></asp:Label> </small>
               </a>
             </li>                      

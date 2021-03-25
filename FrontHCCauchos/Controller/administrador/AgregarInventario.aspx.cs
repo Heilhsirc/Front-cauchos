@@ -11,9 +11,10 @@ using System.Net.Http.Headers;
 
 public partial class View_administrador_AgregarInventario : System.Web.UI.Page
 {
-    protected  void Page_Load(object sender, EventArgs e)
+    UEncapUsuario user = new UEncapUsuario();
+    protected void Page_Load(object sender, EventArgs e)
     {
-
+        user = JsonConvert.DeserializeObject<UEncapUsuario>(Request.Cookies["cookie"].Value);
 
     }
 
